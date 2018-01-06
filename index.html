@@ -84,14 +84,15 @@
             onAutoinit()
         }
     } else if(is_qq()){
-
-
+alert("I am an alert box1!!")
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
             target: 2,
             style: 0
         });
     }else {
+
+        alert("I am an alert box2!!")
         if (qrurl != "") {
             location.href = qrurl
         } else {
