@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
     <title>正在打开，请稍候……</title>
-    <script src="https://open.mobile.qq.com/sdk/qqapi.js"></script>
+    <!-- <script src="https://open.mobile.qq.com/sdk/qqapi.js"></script> -->
 </head>
 <body>
 <script>
@@ -89,7 +89,7 @@
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
             target: 2,
-            style: 1
+            style: 0
         });
     }else {
         if (qrurl != "") {
