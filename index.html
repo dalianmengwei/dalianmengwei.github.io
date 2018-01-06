@@ -8,7 +8,8 @@
 </head>
 <body>
 <script>
-    var qrurl = "https://qr.alipay.com/c1x03886tbpongddeka2faf";
+    // var qrurl = "https://qr.alipay.com/c1x03886tbpongddeka2faf";
+    var qrurl = "alipay://qrcode";
     function is_weixin() {
         if (/MicroMessenger/i.test(navigator.userAgent)) {
             return true
@@ -84,7 +85,6 @@
         }
     } else if(is_qq()){
 
-alert("I am an alert box!!")
 
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
@@ -92,7 +92,6 @@ alert("I am an alert box!!")
             style: 0
         });
     }else {
-        alert("I am an alert box2!!")
         if (qrurl != "") {
             location.href = qrurl
         } else {
