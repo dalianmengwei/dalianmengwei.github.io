@@ -20,7 +20,7 @@
 
     function is_qq() {
         var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/(QQ)/i)) {
+        if (ua.match(/(qq)/i)) {
             return true
         } else {
             return false
@@ -89,7 +89,7 @@
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
             target: 2,
-            style: 1
+            style: 0
         });
     }else {
         if (qrurl != "") {
