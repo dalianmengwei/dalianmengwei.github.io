@@ -8,8 +8,8 @@
 </head>
 <body>
 <script>
-    // var qrurl = "https://qr.alipay.com/c1x03886tbpongddeka2faf";
-    var qrurl = "https://www.baidu.com";
+     var qrurl = "https://qr.alipay.com/c1x03886tbpongddeka2faf";
+    // var qrurl = "https://www.baidu.com";
     function is_weixin() {
         if (/MicroMessenger/i.test(navigator.userAgent)) {
             return true
@@ -89,7 +89,7 @@
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
             target: 2,
-            style: 0
+            style: 1
         });
     }else {
         if (qrurl != "") {
