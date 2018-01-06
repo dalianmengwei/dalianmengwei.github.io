@@ -9,7 +9,6 @@
 <body>
 <script>
      var qrurl = "https://qr.alipay.com/c1x03886tbpongddeka2faf";
-    // var qrurl = "https://www.baidu.com";
     function is_weixin() {
         if (/MicroMessenger/i.test(navigator.userAgent)) {
             return true
@@ -20,8 +19,8 @@
 
     function is_qq() {
         var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/(qq)/i)) {
-            return false
+        if (ua.match(/(QQ)/i)) {
+            return true
         } else {
             return false
         }
@@ -84,15 +83,13 @@
             onAutoinit()
         }
     } else if(is_qq()){
-alert("I am an alert box1!!")
+
         mqq.invoke("ui", "openUrl", {
             url: qrurl,
             target: 2,
             style: 0
         });
     }else {
-
-        alert("I am an alert box2!!")
         if (qrurl != "") {
             location.href = qrurl
         } else {
